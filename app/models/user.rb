@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :country, allow_blank: :true, on: :update, length: { maximum: 50 }  
   validates :country, allow_blank: :true, on: :create, length: { maximum: 0 }  
+  has_many :microposts
 end
